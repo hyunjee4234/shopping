@@ -1,9 +1,9 @@
+//define DOM elements
 const items = document.querySelector('.items');
 const input = document.querySelector('.footer__input');
 const addBtn = document.querySelector('.footer__button');
-//필요한 DOM 요소 정의
 
-//함수(function) 정의
+
 
 function onAdd() {
     const text = input.value;
@@ -12,15 +12,11 @@ function onAdd() {
         return;
     }
 
-    // 1. 사용자가 입력한 텍스트 받아오기
-    // 2. 받아온 택스트로 새로운 아이템 만들기(텍스트 + 삭제버튼)
+
     const item = createItem(text);
 
-    // 3. items 컨테이너안에 새로 만든 아이템 추가
     items.appendChild(item);
-    //4. 새로 추가된 아이템으로 스크롤링
     item.scrollIntoView();
-    //  5. 인풋 초기화하기
     input.value = '';
     input.focus();
 }
